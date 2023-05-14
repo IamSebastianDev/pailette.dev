@@ -80,5 +80,10 @@
       "--loader=ts-node/esm",
       "--experimental-specifier-resolution=node"
     ]
-  }
+  },
+  "name": "pailette.dev",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Sebastian Heinz <sebsatian@iamsebastian.dev>",
+  "license": "MIT"
 }
