@@ -2,7 +2,10 @@
 
 import { Router } from 'express';
 import { submitPrompt } from '../service/submitPrompt.service';
-import { handleBadRequest } from '../../../lib/Errors/BadRequestError';
-import { handleError } from '../../../lib/Errors/GenericError';
+import { getPrompt } from '../service/getPrompt.service';
+import { handleBadRequest, handleNotFound } from '../../../lib/Errors';
 
-export const PromptController = Router().post('/', submitPrompt).use(handleBadRequest(), handleError());
+export const PromptController = Router()
+    .get('/:session', getPrompt)
+    .post('/', submitPrompt)
+    .use(handleBadRequest(), handleNotFound());
