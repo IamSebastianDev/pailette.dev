@@ -1,8 +1,9 @@
 /** @format */
 import { IsText, NotNull } from 'flotsamjs/validators';
-import { db, type Entity } from '../../db';
+import { db } from '../../db';
 import type { Prompt } from './entity/Prompt.model';
 import { IsUuid } from '../../lib/dbValidators/isUuid.validator';
+import type { Entity } from '../../types';
 
 export const prompts = await db.collect<Entity<Prompt>>('prompts', {
     validate: {
