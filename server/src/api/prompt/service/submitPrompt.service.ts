@@ -7,7 +7,21 @@ import type { PromptPayload } from '../entity/Prompt.payload';
 import { prompts } from '../prompt';
 
 export const submitPrompt = createService<PromptPayload, Prompt>(async (payload) => {
-    const result = await prompts.insertOne(payload);
+    const found = await prompts.findOne({
+        where: {
+            session: payload.session,
+        },
+    });
+
+    let result;
+
+    if (found) {
+        prompts.updateOneById(found.id, {
+            ...payload,
+        });
+    } else {
+        result = await prompts.insertOne(payload);
+    }
 
     if (!result) {
         throw new BadRequestError('No value was inserted.');
