@@ -2150,6 +2150,11 @@ flatted@^3.1.0:
   resolved "https://registry.yarnpkg.com/flatted/-/flatted-3.2.7.tgz#609f39207cb614b89d0765b477cb2d437fbf9787"
   integrity sha512-5nqDSxl8nn5BSNxyR3n4I6eDmbolI6WT+QqR547RwxQapgjQBmtktdP+HTBb/a/zLsbzERTONyUB5pefh5TtjQ==
 
+flotsamjs@^1.2.1:
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/flotsamjs/-/flotsamjs-1.2.1.tgz#36cd6be3951f19c0bca4d7fbbc9da9514c838cff"
+  integrity sha512-gDPGoyU5yMCnrsl5pLEay/j7e+2VwfIRS82ySW/BluaiIk+1E/PWX4BN/2FIxR1b47jlBRP8UMIyveslMgwS9w==
+
 foreground-child@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/foreground-child/-/foreground-child-2.0.0.tgz#71b32800c9f15aa8f2f83f4a6bd9bff35d861a53"
