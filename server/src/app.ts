@@ -8,6 +8,7 @@ import webRoutes from './routes';
 import { __root } from './utils/root.util';
 import { loq } from './middlewares/loq.middleware';
 import cors from 'cors';
+import { ApiRouter } from './api/routes';
 
 const { PORT = 3000 } = process.env;
 export const app = express();
@@ -23,6 +24,7 @@ export const app = express();
 ].forEach((middleware) => app.use(middleware));
 
 app.use(webRoutes);
+app.use('/api/v1', ApiRouter);
 app.use(express.static(__root('./client/public')));
 app.use('*', (_, res) => res.status(404).send());
 
