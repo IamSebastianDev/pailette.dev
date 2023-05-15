@@ -7,3 +7,4 @@ export type { Entity } from './Entity';
 export type { OpenAiClientInit } from './OpenAiClientInit';
 export type { OpenAiAction } from './OpenAiAction';
 export type { OpenAiModel } from './OpenAiModel';
+export type { OkResponse } from './OkResponse';
