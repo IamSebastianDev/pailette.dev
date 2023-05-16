@@ -48,6 +48,7 @@ Temporary Items
 # Custom folders
 archive
 .idea
+.excalidraw
 
 # Yarn
 .yarn/*
