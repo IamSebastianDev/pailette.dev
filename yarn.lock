@@ -2175,9 +2175,9 @@ flatted@^3.1.0:
   integrity sha512-5nqDSxl8nn5BSNxyR3n4I6eDmbolI6WT+QqR547RwxQapgjQBmtktdP+HTBb/a/zLsbzERTONyUB5pefh5TtjQ==
 
 flotsamjs@^1.2.1:
-  version "1.2.1"
-  resolved "https://registry.yarnpkg.com/flotsamjs/-/flotsamjs-1.2.1.tgz#36cd6be3951f19c0bca4d7fbbc9da9514c838cff"
-  integrity sha512-gDPGoyU5yMCnrsl5pLEay/j7e+2VwfIRS82ySW/BluaiIk+1E/PWX4BN/2FIxR1b47jlBRP8UMIyveslMgwS9w==
+  version "1.2.2"
+  resolved "https://registry.yarnpkg.com/flotsamjs/-/flotsamjs-1.2.2.tgz#40f9938e73f620e76114e9a8f8ef2ca6ffa60fe8"
+  integrity sha512-Xk+p1dfa0v9rpYQARIZL9AMtpYozgpd4oblcq+NdK8c5Y7nNGhSrZjsateFxEMieibYOpwifmJN2qvBGqHXAAQ==
 
 follow-redirects@^1.14.8:
   version "1.15.2"
