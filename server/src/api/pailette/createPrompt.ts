@@ -1,43 +1,42 @@
 /** @format */
 
 import type { ChatCompletionRequestMessage } from 'openai';
-import type { PailetteGenerator } from './entity/PailetteGenerator';
+import { isNonNull } from '../../utils/isNonNull.util';
 
 export const createPrompt = (
     prompt: string,
-    schema: string[],
-    generator: PailetteGenerator
+    base: string | undefined,
+    colors: string[],
+    format: string
 ): ChatCompletionRequestMessage[] => {
-    const generators: Record<PailetteGenerator, string> = {
-        css: '--color-<color-name>: <rgba color value>',
-        hex: '#<color-hex-value>',
-        rgba: 'rgba(<color-rgb-value>, 1)',
-        hsla: 'hsla(<color-hsl-value>, 1)',
+    const tokens = {
+        prompt: (prompt: string) => `Create a color palette. Use the following prompt as inspiration and 
+        guideline: "${prompt}".`,
+        base: (base: string) => `Use the following color as base for the generation: ${base}`,
+        colors: (colors: string[]) => `Create colors for the following color names: "${colors.join(', ')}"`,
+        format: (format: string) => ` The Values of the color should be provided in the following format: "${format}".`,
+        schema: () => `Do not include any explanations, only provide a  RFC8259 compliant JSON response  following this format without deviation. 
+        {
+            "prompt": "the original prompt",
+            "reasoning": "your reasoning for your color choices",
+            "colors": [
+                {
+                    "name": "First Color Name",
+                    "hex: "First Color Value as hex",
+                    "rgba": "First Color Value as RGBA",
+                    "explanation": "Short text explaining the color choice"
+                },
+                {
+                    "name: "Second Color Name",
+                    "hex: "Second Color Value as hex",
+                    "rgba": "Second Color Value as RGBA"
+                    "explanation": "Short text explaining the color choice"
+                },
+                ... as many colors as there are color names should be generated here
+            ],
+            "output": "The color palette as easily copyable and formatted text"
+        }`,
     };
-
-    const content = `Create a color palette. Use the following prompt as inspiration and 
-    guideline: "${prompt}". 
-    Create colors for the following color names: "${schema.join(', ')}"
-    The Values of the color should be provided in the following format: "${generators[generator]}".
-    Do not include any explanations, only provide a  RFC8259 compliant JSON response  following this format without deviation. 
-    {
-        "prompt": "the original prompt",
-        "reasoning": "your reasoning for your color choices",
-        "colors": [
-            {
-                "name": "First Color Name",
-                "value: "First Color Value",
-                "explanation": "Short text explaining the color choice"
-            },
-            {
-                "name: "Second Color Name",
-                "value: "Second Color Value",
-                "explanation": "Short text explaining the color choice"
-            },
-            ... as many colors as there are color names should be generated here
-        ],
-        "output": "The color palette as easily copyable and formatted text"
-    }`;
 
     return [
         {
@@ -46,7 +45,15 @@ export const createPrompt = (
         },
         {
             role: 'user',
-            content: content,
+            content: [
+                tokens.prompt(prompt),
+                base ? tokens.base(base) : null,
+                tokens.colors(colors),
+                tokens.format(format),
+                tokens.schema(),
+            ]
+                .filter(isNonNull)
+                .join('/n'),
         },
     ];
 };
