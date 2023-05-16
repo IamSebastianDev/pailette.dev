@@ -2,5 +2,7 @@
 
 export type PailetteColor = {
     name: string;
-    value: string;
+    hex: string;
+    rgba: string;
+    explanation: string;
 };
