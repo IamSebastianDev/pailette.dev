@@ -16,7 +16,7 @@ export const submitPrompt = createService<PromptPayload, Prompt>(async (payload)
     let result;
 
     if (found) {
-        prompts.updateOneById(found.id, {
+        result = await prompts.updateOneById(found.id, {
             ...payload,
         });
     } else {
