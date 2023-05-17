@@ -39,6 +39,7 @@ export const createPailette = createService<PailettePayload, Pailette>(async ({ 
         },
     });
     const fetched = await retry(async () => {
+        console.log('fetching...');
         const { data } = await sendPrompt(async (client, model, temperature) => {
             return client.createChatCompletion({
                 model,
