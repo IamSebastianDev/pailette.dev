@@ -10,6 +10,6 @@ export const pailettes = await db.collect<Entity<Pailette>>('pailettes', {
     validate: {
         session: [NotNull, IsUuid()],
         output: [NotNull, IsString],
-        colors: [NotNull, IsArray({ min: 1, max: 8, items: [NotNull] })],
+        colors: [NotNull, IsArray({ min: 1, max: 16, items: [NotNull] })],
     },
 });

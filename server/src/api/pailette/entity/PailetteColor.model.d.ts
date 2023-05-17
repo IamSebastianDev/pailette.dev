@@ -3,6 +3,6 @@
 export type PailetteColor = {
     name: string;
     hex: string;
-    rgba: string;
+    value: string;
     explanation: string;
 };

@@ -7,7 +7,7 @@ import type { Entity } from '../../types';
 
 export const colourSchemas = await db.collect<Entity<ColourSchema>>('colourSchemas', {
     validate: {
-        schema: [NotNull, IsArray({ min: 1, items: [NotNull, IsString] })],
+        schema: [NotNull, IsArray({ min: 1, max: 16, items: [NotNull, IsString] })],
         session: [NotNull, IsUuid()],
     },
 });
