@@ -4,5 +4,11 @@
         "stylelint-config-prettier", 
         "stylelint-config-standard-scss",
         "stylelint-config-prettier-scss"
-    ]
+    ],
+    "rules": {
+        "color-no-hex": true,
+        "color-function-notation": ["modern", { "ignore": ["with-var-inside"] }],
+        "declaration-empty-line-before": null,
+        "font-family-name-quotes": "always-unless-keyword"
+    }
 }
