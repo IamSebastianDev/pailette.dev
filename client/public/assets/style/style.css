@@ -1,1 +1,83 @@
 /** @format */
+
+:root {
+    --ui-fonts-heading: system-ui, -apple-system, 'BlinkMacSystemFont', 'Segoe UI', 'Roboto';
+    --ui-fonts-body: 'Montserrat', system-ui, -apple-system, 'BlinkMacSystemFont', 'Segoe UI', 'Roboto';
+
+    /* Rgb Color Values */
+    --rgb-color-primary: 0, 191, 255;
+    --rgb-color-primary-shade: 0, 119, 179;
+    --rgb-color-secondary: 255, 160, 122;
+    --rgb-color-secondary-shade: 179, 89, 0;
+    --rgb-color-background: 245, 245, 245;
+    --rgb-color-background-shade: 217, 217, 217;
+    --rgb-color-text: 51, 51, 51;
+    --rgb-color-shadow: 201, 201, 201;
+    --rgb-color-semantic-success: 76, 175, 80;
+    --rgb-color-semantic-error: 244, 67, 54;
+
+    /* ui-colors */
+    --ui-color-primary: rgba(var(--rgb-color-primary), 1);
+    --ui-color-primary-shade: rgba(var(--rgb-color-primary-shade), 1);
+    --ui-color-secondary: rgba(var(--rgb-color-secondary), 1);
+    --ui-color-secondary-shade: rgba(var(--rgb-color-secondary-shade), 1);
+    --ui-color-background: rgba(var(--rgb-color-background), 1);
+    --ui-color-background-shade: rgba(var(--rgb-color-background-shade), 1);
+    --ui-color-text: rgba(var(--rgb-color-text), 1);
+    --ui-color-semantic-success: rgba(var(--rgb-color-semantic-success), 1);
+    --ui-color-semantic-error: rgba(var(--rgb-color-semantic-error), 1);
+
+    /* ui-color-shades */
+    --ui-color-primary-60: rgba(var(--rgb-color-primary), 0.6);
+    --ui-color-primary-shade-60: rgba(var(--rgb-color-primary-shade), 0.6);
+    --ui-color-secondary-60: rgba(var(--rgb-color-secondary), 0.6);
+    --ui-color-secondary-shade-60: rgba(var(--rgb-color-secondary-shade), 0.6);
+    --ui-color-background-60: rgba(var(--rgb-color-background), 0.6);
+    --ui-color-background-shade-60: rgba(var(--rgb-color-background-shade), 0.6);
+    --ui-color-text-60: rgba(var(--rgb-color-text), 0.6);
+    --ui-color-semantic-success-60: rgba(var(--rgb-color-semantic-success), 0.6);
+    --ui-color-semantic-error-60: rgba(var(--rgb-color-semantic-error), 0.6);
+
+    /* ui-shadows */
+    --ui-shadow: 0px 1px 2px rgba(var(--rgb-color-shadow), 0.25);
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+
+    font-size: 10px;
+    font-family: var(--ui-fonts-body);
+}
+
+body[theme='light'] {
+    background: var(--ui-color-background);
+    color: var(--ui-color-text);
+}
+
+/* Design System */
+
+.layout {
+    display: flex;
+}
+
+.layout.flex-row {
+    flex-direction: row;
+}
+
+.layout.flex-column {
+    flex-direction: column;
+}
+
+.layout.flex-row.flex-align-center {
+    align-items: center;
+}
+
+.layout.flex-row.small {
+    column-gap: 0.5rem;
+}
+
+.layout.flex-column.small {
+    row-gap: 0.5rem;
+}
