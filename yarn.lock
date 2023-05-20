@@ -331,6 +331,11 @@
   resolved "https://registry.yarnpkg.com/@iasd/handle-async/-/handle-async-1.0.1.tgz#a563277ab7c3e823f40d01dac8c097b16f001315"
   integrity sha512-QbYUrxEGcohtyh/5+WLITXEwT7Ur6v6kR04Y+MwLjI30Ck3lYEbdrh+7RDMlq68qLGo7hR+mHWAi2PZf6bEEWw==
 
+"@iasd/svelte-supercharged-stores@^1.0.1":
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/@iasd/svelte-supercharged-stores/-/svelte-supercharged-stores-1.0.2.tgz#16657d3e4d59fdadab5583384fd34599d21e5fb1"
+  integrity sha512-zs4lm5bpp4PYw0UcDplk1iZMFIGw8aQG7HXkcww2eGsxRQHi1o25as07X6ZIN+NIiexhLpPP61TBeJhcTjbLbg==
+
 "@isaacs/cliui@^8.0.2":
   version "8.0.2"
   resolved "https://registry.yarnpkg.com/@isaacs/cliui/-/cliui-8.0.2.tgz#b37667b7bc181c168782259bab42474fbf52b550"
@@ -5060,9 +5065,9 @@ rollup-plugin-esbuild@^5.0.0:
     jsonc-parser "^3.2.0"
 
 rollup-plugin-rld@^1.2.0:
-  version "1.2.1"
-  resolved "https://registry.yarnpkg.com/rollup-plugin-rld/-/rollup-plugin-rld-1.2.1.tgz#027af1eee8a5a199a0606d5fe4c98a6ac46cdac1"
-  integrity sha512-ajfrFhXx/+td/nh/t6RHYyBCbo4sJYe7frnWMd7C6mWlWgkNugusweZyIkRvU0PReWA95yPnNfRch3HvOoNZcg==
+  version "1.3.0"
+  resolved "https://registry.yarnpkg.com/rollup-plugin-rld/-/rollup-plugin-rld-1.3.0.tgz#529b0cb6c9227005581778c632d4ffd3a516de70"
+  integrity sha512-gsRLUoaPHTyI844SQ/ttjSEnuDWsxEjrnIfYPRFoK4cSLwv00kTXRSkC4RZRJBELmuTKdtUN8uGn2RxFGwNDaA==
 
 rollup-plugin-scss@4:
   version "4.0.0"
