@@ -55,7 +55,7 @@ export default [
             esbuild(),
             cleanup({ extensions: ['.ts'] }),
             resolve({ browser: true }),
-            rld({ url: 'rld' }),
+            rld({ log: true }),
             process.env.NODE_ENV === 'production' && terser(),
         ],
     },
