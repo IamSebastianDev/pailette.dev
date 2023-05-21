@@ -9,7 +9,7 @@ export const loq = () => {
 
         const { VERBOSE } = process.env;
 
-        if (VERBOSE === 'true' || environment.isDevelopment()) {
+        if (VERBOSE === 'true' || environment.current === 'development') {
             process.stdout.write(
                 `\x1b[1m\x1b[36m[${process.env.APP_NAME}]\x1b[0m\x1b[36m [${method}]::${url} ${Object.entries({
                     ...query,
