@@ -332,9 +332,9 @@
   integrity sha512-QbYUrxEGcohtyh/5+WLITXEwT7Ur6v6kR04Y+MwLjI30Ck3lYEbdrh+7RDMlq68qLGo7hR+mHWAi2PZf6bEEWw==
 
 "@iasd/svelte-supercharged-stores@^1.0.1":
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/@iasd/svelte-supercharged-stores/-/svelte-supercharged-stores-1.0.2.tgz#16657d3e4d59fdadab5583384fd34599d21e5fb1"
-  integrity sha512-zs4lm5bpp4PYw0UcDplk1iZMFIGw8aQG7HXkcww2eGsxRQHi1o25as07X6ZIN+NIiexhLpPP61TBeJhcTjbLbg==
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/@iasd/svelte-supercharged-stores/-/svelte-supercharged-stores-1.1.1.tgz#c9bdd506fa28c7126e2ad4fd4e07a57318798110"
+  integrity sha512-3dvJYKpuxyV0e8iU19bat1BJOXGiQM6V+qzbpkgufuJYNl13Y6nV8pb1/DMcOMkMF6Ox8gNSNtl+OOPE/wtOpA==
 
 "@isaacs/cliui@^8.0.2":
   version "8.0.2"
