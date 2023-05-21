@@ -1,22 +1,19 @@
 <!-- @format -->
 <script lang="ts">
-    import { joinClassNames } from '../../../utils/joinClassnames';
+    import { joinClassNames } from '../../../utils';
 
-    export let size: 'small' | 'regular' | 'large' = 'regular';
-    export let spacing: 'relaxed' | 'normal' | 'tight' = 'normal';
+    export let size: 'small' | 'regular' = 'regular';
+    export let spacing: 'relaxed' | 'tight' = 'relaxed';
+    export let classes: string[] = [];
 </script>
 
-<span class={joinClassNames(size, spacing)}>
+<span class={joinClassNames(size, spacing, ...classes)}>
     <slot />
 </span>
 
 <style>
     .relaxed {
-        line-height: 2rem;
-    }
-
-    .normal {
-        line-height: 1.6rem;
+        line-height: 1.8rem;
     }
 
     .tight {
@@ -29,9 +26,5 @@
 
     .regular {
         font-size: 1.6rem;
-    }
-
-    .large {
-        font-size: 2.1rem;
     }
 </style>
