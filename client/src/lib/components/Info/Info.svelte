@@ -22,15 +22,17 @@
         <svelte:component this={icon} size={'1.6rem'} />
     </div>
     <Text tracking={'wide'} bold={true} size={'small'}>
-        v{$data?.version ?? '--'}
-        {$data?.ok ? '- OK' : '- ERROR'}
+        {#if !$loading}
+            v{$data?.version ?? '--'}
+            {$data?.ok ? '- OK' : '- ERROR'}
+        {:else}
+            v ----------
+        {/if}
     </Text>
 </div>
 
 <style lang="scss">
     .container {
-        border: 1px solid var(--ui-color-background-shade);
-        border-radius: 0.8rem;
         padding: 0.4rem;
         gap: 0.8rem;
 
@@ -39,13 +41,8 @@
     }
 
     .indicator {
-        border-radius: 50%;
-
-        display: grid;
-        place-items: center;
-
         &.state-loading {
-            color: var(--ui-color-semantic-success);
+            animation: spin 1.4s ease-out infinite;
         }
 
         &.state-error {
