@@ -83,3 +83,19 @@ body {
 .layout.flex-column.small {
     row-gap: 0.5rem;
 }
+
+/* Animations */
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    80% {
+        transform: rotate(-360deg);
+    }
+
+    100% {
+        transform: rotate(-360deg);
+    }
+}
