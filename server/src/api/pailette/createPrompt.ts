@@ -1,7 +1,7 @@
 /** @format */
 
 import type { ChatCompletionRequestMessage } from 'openai';
-import { isNonNull } from '../../utils/isNonNull.util';
+import { isNonNull } from '../../../../shared/utils/isNonNull.util';
 
 export const createPrompt = (
     prompt: string,
