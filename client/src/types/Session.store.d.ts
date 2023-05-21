@@ -1,5 +1,5 @@
 /** @format */
 
-export type Session = {
+export type SessionStoreData = {
     session: string;
 };

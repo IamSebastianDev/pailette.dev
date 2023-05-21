@@ -1,6 +1,6 @@
 /** @format */
 
-export type HealthStore = {
+export type VersionStoreData = {
     ok: boolean;
     version: string;
     application_name?: string;

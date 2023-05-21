@@ -1,4 +1,4 @@
 /** @format */
 
-export type { HealthStore } from './Health.store';
-export type { Session } from './Session';
+export type { VersionStoreData } from './Version.store';
+export type { SessionStoreData } from './Session.store';
