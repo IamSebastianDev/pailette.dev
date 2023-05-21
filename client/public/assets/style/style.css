@@ -1,8 +1,8 @@
 /** @format */
 
 :root {
-    --ui-fonts-heading: system-ui, -apple-system, 'BlinkMacSystemFont', 'Segoe UI', 'Roboto';
-    --ui-fonts-body: 'Montserrat', system-ui, -apple-system, 'BlinkMacSystemFont', 'Segoe UI', 'Roboto';
+    --ui-fonts-heading: 'Nunito', system-ui, -apple-system, 'BlinkMacSystemFont';
+    --ui-fonts-body: 'Raleway', system-ui, -apple-system, 'BlinkMacSystemFont';
 
     /* Rgb Color Values */
     --rgb-color-primary: 0, 191, 255;
