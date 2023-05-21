@@ -1,3 +1,3 @@
 /** @format */
 
-export { environment } from './environment';
+export { joinClassNames } from './joinClassNames';

@@ -1,3 +1,5 @@
 /** @format */
 
-export const joinClassNames = (...strings: string[]): string => strings.join(' ');
+import { isNonNull } from '../../../shared/utils/isNonNull.util';
+
+export const joinClassNames = (...strings: (string | null)[]): string => strings.filter(isNonNull).join(' ');
