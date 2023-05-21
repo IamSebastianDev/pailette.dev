@@ -1,6 +1,6 @@
 <!-- @format -->
 <script lang="ts">
-    import { joinClassNames } from '../../../utils';
+    import { joinClassNames } from '../../../../utils';
 
     /**
      * @type { 'small' | 'regular' }
@@ -30,6 +30,11 @@
      */
     export let bold: boolean = false;
 
+    /**
+     * @type {string[]}
+     * @description
+     * Additional classnames to add.
+     */
     export let classes: string[] = [];
 </script>
 

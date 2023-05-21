@@ -4,7 +4,7 @@
     import { version } from '../../stores/version.store';
     import { joinClassNames } from '../../../utils/';
     import type { VersionStoreData } from '../../../types';
-    import Text from '../UI/Text.svelte';
+    import Text from '../UI/Text/Text.svelte';
     const { loading, data } = version;
 
     const getTheme = (loading: boolean, data: VersionStoreData | null) => {
