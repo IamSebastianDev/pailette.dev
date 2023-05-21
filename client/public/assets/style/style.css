@@ -49,11 +49,8 @@ body {
 
     font-size: 10px;
     font-family: var(--ui-fonts-body);
-}
-
-body[theme='light'] {
-    background: var(--ui-color-background);
     color: var(--ui-color-text);
+    background: var(--ui-color-background);
 }
 
 /* Design System */
@@ -72,6 +69,10 @@ body[theme='light'] {
 
 .layout.flex-row.flex-align-center {
     align-items: center;
+}
+
+.layout.flex-row.flex-space-between {
+    justify-content: space-between;
 }
 
 .layout.flex-row.small {
