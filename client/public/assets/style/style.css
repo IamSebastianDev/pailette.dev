@@ -4,7 +4,7 @@
     --ui-fonts-heading: 'Nunito', system-ui, -apple-system, 'BlinkMacSystemFont';
     --ui-fonts-body: 'Raleway', system-ui, -apple-system, 'BlinkMacSystemFont';
 
-    /* Rgb Color Values */
+    /* rgb color values */
     --rgb-color-primary: 0, 191, 255;
     --rgb-color-primary-shade: 0, 119, 179;
     --rgb-color-secondary: 255, 160, 122;
@@ -16,7 +16,7 @@
     --rgb-color-semantic-success: 76, 175, 80;
     --rgb-color-semantic-error: 244, 67, 54;
 
-    /* ui-colors */
+    /* ui-color */
     --ui-color-primary: rgba(var(--rgb-color-primary), 1);
     --ui-color-primary-shade: rgba(var(--rgb-color-primary-shade), 1);
     --ui-color-secondary: rgba(var(--rgb-color-secondary), 1);
@@ -49,6 +49,7 @@ body {
 
     font-size: 10px;
     font-family: var(--ui-fonts-body);
+    font-weight: 300;
     color: var(--ui-color-text);
     background: var(--ui-color-background);
 }
