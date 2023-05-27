@@ -26,6 +26,6 @@ export const app = express();
 app.use(webRoutes);
 app.use('/api/v1', ApiRouter);
 app.use(express.static(__root('./client/public')));
-app.use('*', (_, res) => res.redirect('/'));
+app.use('*', (_, res) => res.sendFile(__root('./client/index.html')));
 
 app.listen(PORT, () => console.log(`\x1b[34m\x1b[1m[App]\x1b[0m\x1b[34m started on port ${PORT}\x1b[0m`));
