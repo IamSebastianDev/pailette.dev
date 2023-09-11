@@ -6,5 +6,8 @@
   "private": true,
   "publishConfig": {
     "access": "public"
+  },
+  "devDependencies": {
+    "@tsconfig/svelte": "^5.0.2"
   }
 }
