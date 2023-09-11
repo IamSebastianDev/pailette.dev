@@ -1,0 +1,42 @@
+{
+  "name": "@pai/kzw",
+  "packageManager": "yarn@3.6.1",
+  "version": "0.0.0",
+  "private": true,
+  "publishConfig": {
+    "access": "public"
+  },
+  "type": "module",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "exports": {
+    "require": "./dist/index.js",
+    "import": "./dist/index.mjs"
+  },
+  "types": "dist/types/index.d.ts",
+  "scripts": {
+    "build": "rollup -c .config/rollup.config.js",
+    "dev": "yarn build --watch"
+  },
+  "devDependencies": {
+    "@pai/config": "workspace:^",
+    "@pai/core": "workspace:^",
+    "@rollup/plugin-commonjs": "^25.0.3",
+    "@rollup/plugin-json": "^6.0.0",
+    "@rollup/plugin-node-resolve": "^15.1.0",
+    "@rollup/plugin-terser": "^0.4.3",
+    "@types/express": "^4.17.17",
+    "@types/node": "^20.4.8",
+    "esbuild": "^0.19.0",
+    "rollup": "^3.27.2",
+    "rollup-plugin-cleanup": "^3.2.1",
+    "rollup-plugin-dts": "^5.3.1",
+    "rollup-plugin-esbuild": "^5.0.0",
+    "tsx": "^3.12.7",
+    "typescript": "^5.1.6"
+  },
+  "dependencies": {
+    "@iasd/handle-async": "^1.0.1",
+    "express": "^4.18.2"
+  }
+}

@@ -1,5 +1,0 @@
-node_modules
-.*
-!.config
-commitlint.config.js
-*.md

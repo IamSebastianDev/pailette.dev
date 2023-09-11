@@ -1,0 +1,17 @@
+# @format
+
+version: '3.8'
+volumes:
+    db-data:
+services:
+    postgresdb:
+        container_name: ${DB_NAME}
+        image: 'postgres'
+        ports:
+            - ${DB_PORT}:5432
+        environment:
+            POSTGRES_USER: ${DB_USER}
+            POSTGRES_PASSWORD: ${DB_AUTH}
+            POSTGRES_DB: ${DB_NAME}
+        volumes:
+            - db-data:/data/db

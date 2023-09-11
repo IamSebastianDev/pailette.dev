@@ -1,0 +1,10 @@
+{
+  "name": "@pai/config",
+  "type": "module",
+  "packageManager": "yarn@3.6.1",
+  "version": "0.0.0",
+  "private": true,
+  "publishConfig": {
+    "access": "public"
+  }
+}

@@ -1,0 +1,1 @@
+export type ParsedParams = Record<string, unknown>;
