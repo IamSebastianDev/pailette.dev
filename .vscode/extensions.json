@@ -6,6 +6,7 @@
         "mikestead.dotenv",
         "usernamehw.errorlens",
         "esbenp.prettier-vscode",
-        "wayou.vscode-todo-highlight"
+        "wayou.vscode-todo-highlight",
+        "svelte.svelte-vscode"
     ]
 }
