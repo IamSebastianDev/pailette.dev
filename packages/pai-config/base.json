@@ -15,6 +15,7 @@
         "strictPropertyInitialization": true,
         "noUnusedLocals": true,
         "skipLibCheck": false,
-        "allowSyntheticDefaultImports": true
+        "allowSyntheticDefaultImports": true,
+        "target": "ESNext"
     }
 }

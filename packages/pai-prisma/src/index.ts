@@ -9,3 +9,5 @@ export const client = new PrismaClient().$extends({
         ...ExtendedUser(Prisma.getExtensionContext(this)),
     },
 });
+
+export { excludeField } from './utils/excludeField';
