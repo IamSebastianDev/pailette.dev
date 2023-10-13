@@ -14,5 +14,6 @@ export const app = express().use(
     cors(),
     helmet(),
     compression(),
+    express.json(),
     loq({ verbose: true, appName: env.getOrFail('APP_NAME') })
 );
