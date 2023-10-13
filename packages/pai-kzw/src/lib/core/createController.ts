@@ -2,7 +2,7 @@
 
 import type { NextFunction, Request, Response } from 'express';
 import { handleAsync } from '@iasd/handle-async';
-import { Payload } from '../types/Payload';
+import { øPayload } from '../types/øPayload';
 import { ControllerFunction } from '../types/ControllerFunction';
 import { createPayload } from './createPayload';
 
@@ -18,7 +18,7 @@ import { createPayload } from './createPayload';
  * ```
  */
 
-export const createController = <ResponseData extends Record<PropertyKey, unknown>, P extends Payload>(
+export const createController = <ResponseData extends Record<PropertyKey, unknown>, P extends øPayload>(
     controllerFunction: ControllerFunction<ResponseData, P>
 ) => {
     return async (req: Request, res: Response, next: NextFunction) => {
