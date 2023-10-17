@@ -27,7 +27,7 @@ export const loginUserController = createController(async ({ body }: LoginUserPa
     await setRefreshToken(jwtId, refreshToken, user.id);
 
     return {
-        user: excludeField(user),
+        user: excludeField(user, 'password'),
         authorized: {
             time: Date.now(),
             userId: user.id,

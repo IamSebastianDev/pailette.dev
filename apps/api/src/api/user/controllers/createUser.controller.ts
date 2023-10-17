@@ -4,6 +4,7 @@ import { BadRequestError, createController } from '@pai/kzw';
 import { CreateUserPayload } from '../payloads/createUser.payload';
 import { createUser } from '../services/createUser.service';
 import { getUserByEmail } from '../services/getUserByEmail.service';
+import { excludeField } from '@pai/prisma';
 
 export const createUserController = createController(async ({ body }: CreateUserPayload, req) => {
     const { name, email, password } = body;
@@ -21,6 +22,6 @@ export const createUserController = createController(async ({ body }: CreateUser
     }
 
     return {
-        user,
+        user: excludeField(user, 'password'),
     };
 });
