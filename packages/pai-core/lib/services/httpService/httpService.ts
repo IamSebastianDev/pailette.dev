@@ -64,11 +64,19 @@ export const createHttpService = (init: Partial<HttpServiceInit>): HttpService =
         const filterRequestBodyForMethods = ['GET', 'DELETE', 'TRACE', 'OPTIONS', 'HEAD'];
         const requestInit = {
             ...init,
-            ...(init && !filterRequestBodyForMethods.includes(init.method ?? 'GET') ? { ...rest } : {}),
+            ...(init && !filterRequestBodyForMethods.includes(init.method ?? 'GET')
+                ? { body: JSON.stringify({ ...rest }) }
+                : {}),
         };
 
         try {
-            const request = createRequest(url, { ...init, ...requestInit });
+            const request = createRequest(url, {
+                ...requestInit,
+                headers: {
+                    'Content-Type': 'application/json',
+                    ...requestInit.headers,
+                },
+            });
             const res = await browserFetch(request);
 
             if (!res.ok) {
