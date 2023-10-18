@@ -4,7 +4,7 @@ import { StorageServiceInit } from './types/StorageServiceInit';
 
 export const createStorageService = <T extends Record<string, unknown>>({
     service = 'localStorage',
-    namespace = '',
+    namespace,
 }: StorageServiceInit) => {
     const _service = window[service];
     const _storageMap = new Map<PropertyKey, unknown>();
