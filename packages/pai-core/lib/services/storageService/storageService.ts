@@ -2,13 +2,16 @@
 
 import { StorageServiceInit } from './types/StorageServiceInit';
 
-export const storageService = <T extends Map<string, unknown>>({ service = 'localStorage' }: StorageServiceInit) => {
+export const createStorageService = <T extends Record<string, unknown>>({
+    service = 'localStorage',
+    namespace = '',
+}: StorageServiceInit) => {
     const _service = window[service];
     const _storageMap = new Map<PropertyKey, unknown>();
 
     const get = <Token extends keyof T>(token: Token): T[Token] | null => {
         if (!_storageMap.has(token)) {
-            const stored = _service.getItem(token.toString());
+            const stored = _service.getItem([namespace, token].join('_'));
 
             if (stored === null) {
                 return stored;
@@ -34,7 +37,7 @@ export const storageService = <T extends Map<string, unknown>>({ service = 'loca
         get,
         getOrFail,
         set: <Token extends keyof T>(token: Token, value: T[Token]) => {
-            _service.setItem(token.toString(), JSON.stringify({ data: value }));
+            _service.setItem([namespace, token].join('_'), JSON.stringify({ data: value }));
             _storageMap.set(token, value);
         },
     };
