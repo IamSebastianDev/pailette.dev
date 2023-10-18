@@ -9,7 +9,7 @@ import type { HttpService } from './types/HttpService';
 import type { ErrorHandler } from './types/ErrorHandler';
 import { HttpError } from './core/HttpError.error';
 
-export const httpService = (init: Partial<HttpServiceInit>): HttpService => {
+export const createHttpService = (init: Partial<HttpServiceInit>): HttpService => {
     const { baseUrl = '', bodyParser = async (res: Response) => await res.json() } = init;
     const _requestInterceptors: RequestInterceptFn[] = [];
     const _responseInterceptors: ResponseInterceptFn[] = [];
