@@ -1394,6 +1394,8 @@ __metadata:
     "@iasd/svelte-supercharged-stores": ^1.2.0
     "@pai/config": "workspace:^"
     "@pai/core": "workspace:^"
+    "@pai/prisma": "workspace:^"
+    "@prisma/client": ^5.4.2
     "@sveltejs/vite-plugin-svelte": ^2.4.2
     "@tsconfig/svelte": ^5.0.0
     sass: ^1.66.1
@@ -1415,6 +1417,7 @@ __metadata:
     "@rollup/plugin-json": ^6.0.0
     "@rollup/plugin-node-resolve": ^15.1.0
     "@rollup/plugin-terser": ^0.4.3
+    bcrypt: ^5.1.1
     esbuild: ^0.18.16
     prisma: ^5.0.0
     prisma-import: ^1.0.4
