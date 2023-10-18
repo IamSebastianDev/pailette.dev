@@ -7,3 +7,4 @@ export { PrimitiveParser } from './lib/utils/PrimitiveParser';
 export { isNotEmpty } from './lib/utils/isNotEmpty';
 export { createHttpService } from './lib/services/httpService/httpService';
 export { createStorageService } from './lib/services/storageService/storageService';
+export { assertResponse } from './lib/utils/assertResponse';
