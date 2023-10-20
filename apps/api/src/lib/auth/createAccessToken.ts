@@ -8,6 +8,6 @@ export const createAccessToken = async (userId: string) => {
     return await new jose.SignJWT({ userId })
         .setProtectedHeader({ alg: 'HS256' })
         .setIssuedAt()
-        .setExpirationTime('5m')
+        .setExpirationTime(env.getOrFail('JWT_EXP_TIME'))
         .sign(secret);
 };
