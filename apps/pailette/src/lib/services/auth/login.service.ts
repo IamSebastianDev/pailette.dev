@@ -8,7 +8,7 @@ import type { ØAuth } from '../../stores/øauth/øauth';
 import { øAuth } from '../../stores/øauth/øauth.store';
 import { sessionService } from '../session/session.service';
 
-export const login = (payload: LoginPayload) => {
+export const loginUser = (payload: LoginPayload) => {
     httpService
         .post<JsonResponse<ØAuth>>(`/user/auth/login`, { ...payload })
         .then(assertResponse)
