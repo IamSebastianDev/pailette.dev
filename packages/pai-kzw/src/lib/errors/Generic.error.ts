@@ -13,7 +13,8 @@ export class GenericError extends Error {
     static intercept(origin?: string) {
         return async (err: Error, req: Request, res: Response, next: NextFunction) => {
             if (!(err instanceof Error)) return next(err);
-            return res.status(500).json({
+            const code = 'code' in err ? err.code : 500;
+            return res.status(<number>code).json({
                 data: null,
                 error: {
                     ...err,
