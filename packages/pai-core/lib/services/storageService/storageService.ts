@@ -40,5 +40,9 @@ export const createStorageService = <T extends Record<string, unknown>>({
             _service.setItem([namespace, token].join('_'), JSON.stringify({ data: value }));
             _storageMap.set(token, value);
         },
+        remove: <Token extends keyof T>(token: Token) => {
+            _service.removeItem([namespace, token].join('_'));
+            _storageMap.delete(token);
+        },
     };
 };
