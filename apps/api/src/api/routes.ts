@@ -17,6 +17,6 @@ export const routes = express
     .use(
         NotFoundError.intercept(),
         BadRequestError.intercept(),
-        GenericError.intercept(),
-        NotAuthorizedError.intercept()
+        NotAuthorizedError.intercept(),
+        GenericError.intercept()
     );
