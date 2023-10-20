@@ -15,4 +15,5 @@ export type Environment = {
     EMAIL_PORT: string;
     VERBOSE: boolean;
     JWT_AUTH_SECRET: string;
+    JWT_EXP_TIME: string;
 };
