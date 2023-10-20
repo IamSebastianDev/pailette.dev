@@ -37,14 +37,22 @@ export const createHttpService = (init: Partial<HttpServiceInit>): HttpService =
         };
     };
 
-    const createRequest = (resource: URL, init: RequestInit) => {
+    const createRequest = async (resource: URL, init: RequestInit) => {
         const req = new Request(resource, init);
-        return _requestInterceptors.reduce((acc, cur) => cur(acc), req);
+
+        for (const interceptor of _requestInterceptors) {
+            await interceptor(req);
+        }
+
+        return req;
     };
 
-    const parseResponse = <Res>(res: Response): Promise<Res> => {
-        const intercepted = _responseInterceptors.reduce((acc, cur) => cur(acc), res);
-        return bodyParser(intercepted);
+    const parseResponse = async <Res>(res: Response): Promise<Res> => {
+        for (const interceptor of _responseInterceptors) {
+            await interceptor(res);
+        }
+
+        return await bodyParser(res);
     };
 
     const handleErrors = (err: Error): boolean => {
@@ -70,7 +78,7 @@ export const createHttpService = (init: Partial<HttpServiceInit>): HttpService =
         };
 
         try {
-            const request = createRequest(url, {
+            const request = await createRequest(url, {
                 ...requestInit,
                 headers: {
                     'Content-Type': 'application/json',
@@ -83,7 +91,7 @@ export const createHttpService = (init: Partial<HttpServiceInit>): HttpService =
                 throw new HttpError(res.status, res.statusText);
             }
 
-            return parseResponse(res);
+            return await parseResponse(res);
         } catch (error: unknown) {
             if (error instanceof Error && handleErrors(error)) {
                 return null;

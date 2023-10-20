@@ -1,3 +1,3 @@
 /** @format */
 
-export type ResponseInterceptFn = (res: Response) => Response;
+export type ResponseInterceptFn = (res: Response) => Promise<Response>;
