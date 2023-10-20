@@ -8,3 +8,5 @@ export { isNotEmpty } from './lib/utils/isNotEmpty';
 export { createHttpService } from './lib/services/httpService/httpService';
 export { createStorageService } from './lib/services/storageService/storageService';
 export { assertResponse } from './lib/utils/assertResponse';
+export { tapResponse } from './lib/utils/tapResponse';
+export { handleError } from './lib/utils/handleError';
