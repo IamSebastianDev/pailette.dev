@@ -28,13 +28,13 @@ export const authInterceptor = async (request: Request): Promise<Request> => {
     }
 
     const token = await new Promise<string | null>(async (resolve) => {
-        (await refreshTokens({ refreshToken })).subscribe((auth) => {
-            if (!auth) {
-                return resolve(auth);
-            }
+        const auth = await refreshTokens({ refreshToken });
 
-            return resolve(auth.auth.accessToken);
-        });
+        if (!auth) {
+            return resolve(auth);
+        }
+
+        return resolve(auth.auth.accessToken);
     });
 
     if (token) {
