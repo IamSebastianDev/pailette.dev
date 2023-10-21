@@ -1349,6 +1349,14 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@pai/common@workspace:packages/pai-common":
+  version: 0.0.0-use.local
+  resolution: "@pai/common@workspace:packages/pai-common"
+  dependencies:
+    svelte: ^4.2.2
+  languageName: unknown
+  linkType: soft
+
 "@pai/config@workspace:*, @pai/config@workspace:^, @pai/config@workspace:packages/pai-config":
   version: 0.0.0-use.local
   resolution: "@pai/config@workspace:packages/pai-config"
@@ -5973,6 +5981,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"magic-string@npm:^0.30.4":
+  version: 0.30.5
+  resolution: "magic-string@npm:0.30.5"
+  dependencies:
+    "@jridgewell/sourcemap-codec": ^1.4.15
+  checksum: da10fecff0c0a7d3faf756913ce62bd6d5e7b0402be48c3b27bfd651b90e29677e279069a63b764bcdc1b8ecdcdb898f29a5c5ec510f2323e8d62ee057a6eb18
+  languageName: node
+  linkType: hard
+
 "make-dir@npm:3.1.0, make-dir@npm:^3.0.0, make-dir@npm:^3.0.2, make-dir@npm:^3.1.0":
   version: 3.1.0
   resolution: "make-dir@npm:3.1.0"
@@ -9331,6 +9348,27 @@ __metadata:
     magic-string: ^0.30.0
     periscopic: ^3.1.0
   checksum: 2555f222c210a751fff85596adc5a1f0e1ebe7e0499ec7c35b5e8111200271ba0cd0cedeef637dc66f43f4866ad17240f89187bfbaf2ca8fff9a522fc7c4369f
+  languageName: node
+  linkType: hard
+
+"svelte@npm:^4.2.2":
+  version: 4.2.2
+  resolution: "svelte@npm:4.2.2"
+  dependencies:
+    "@ampproject/remapping": ^2.2.1
+    "@jridgewell/sourcemap-codec": ^1.4.15
+    "@jridgewell/trace-mapping": ^0.3.18
+    acorn: ^8.9.0
+    aria-query: ^5.3.0
+    axobject-query: ^3.2.1
+    code-red: ^1.0.3
+    css-tree: ^2.3.1
+    estree-walker: ^3.0.3
+    is-reference: ^3.0.1
+    locate-character: ^3.0.0
+    magic-string: ^0.30.4
+    periscopic: ^3.1.0
+  checksum: deb7c280331420ad1e835b96137a196599a30aac58b0b1542ab7cbf3de20d17249d50eaf9696934413dd4505ad1903c3c67e7e11c783b1aacf74809218e3d4eb
   languageName: node
   linkType: hard
 
